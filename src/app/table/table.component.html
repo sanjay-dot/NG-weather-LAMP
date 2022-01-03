@@ -1,0 +1,20 @@
+<div class="container-fluid"> 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">City</th>
+      <th scope="col">Country</th>
+      <th scope="col">Temp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let x of sqldata; let ndx = index">
+      <th scope="row">{{ndx+1}}</th>
+      <td>{{x.City}}</td>
+      <td>{{x.Country}}</td>
+      <td>{{x.temp - 273|number : '1.0-0'}}<sup>0</sup>C</td>
+    </tr>
+    </tbody>
+    </table>
+  </div>
